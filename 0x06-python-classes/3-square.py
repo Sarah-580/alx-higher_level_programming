@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Class Square is defined"""
+
 
 class Square:
-    """Class Square is defined"""
+    """Class Square is Represented"""
 
     def __init__(self, size=0):
         """
