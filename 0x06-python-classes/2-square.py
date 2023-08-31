@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Class Square is defined"""
 
+
 class Square:
     """Class Square is Represented"""
 
