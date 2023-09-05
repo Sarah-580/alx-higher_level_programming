@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Class Rectangle is defined"""
+"""Class Rectangle is created"""
 
 
 
 class Rectangle:
-    """An empty class Rectangle"""
+    """An empty class Rectangle is defined"""
     pass
