@@ -4,15 +4,14 @@
 
 def pascal_triangle(n):
     """Function that returns a list of lists of integers"""
-    if n <= 0:
-        return []
+    t_row = [1]
+    temp_l = [0]
+    pTri = []
 
-    triangles = [[1]]
-    while len(triangles) != n:
-        tri = triangles[-1]
-        tmp = [1]
-        for i in range(len(tri) - 1):
-            tmp.append(tri[1] + tri[i + 1])
-        tmp.append(1)
-        triangles.append(tmp)
-    return triangles
+    if n <= 0:
+        return pTri
+
+    for i in range(n):
+        pTri.append(t_row)
+        t_row = [l+r for l, r in zip(t_row + temp_l, temp_l + t_row)]
+    return pTri
