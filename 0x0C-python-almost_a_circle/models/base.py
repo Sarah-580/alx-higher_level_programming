@@ -56,13 +56,13 @@ class Base:
         else:
             return json.loads(json_string)
 
-   @classmethod
-   def create(cls, **dictionary):
-       """create a new object from dictionary"""
-       if cls.__name__ == "Rectangle":
-           new = cls(10, 10)
-       elif cls.__name__ == "Square":
-           new = cls(10, 10)
+    @classmethod
+    def create(cls, **dictionary):
+        """create a new object from dictionary"""
+        if cls.__name__ == "Rectangle":
+            new = cls(10, 10)
+        elif cls.__name__ == "Square":
+            new = cls(10, 10)
         new.update(**dictionary)
         return new
 
@@ -112,24 +112,24 @@ class Base:
 
         return object_created
 
-   @classmethod
-   def draw(cls, list_rectangles, list_squares):
-       """draw the figure"""
-       window = turtle.Screen()
-       pen = turtle.Pen()
-       figures = list_rectangles + list_squares
+    @classmethod
+    def draw(cls, list_rectangles, list_squares):
+        """draw the figure"""
+        window = turtle.Screen()
+        pen = turtle.Pen()
+        figures = list_rectangles + list_squares
 
-       for fig in figures:
-           pen.up()
-           pen.goto(fig.x, fig.y)
-           pen.down()
-           pen.forward(fig.width)
-           pen.right(90)
-           pen.forward(fig.height)
-           pen.right(90)
-           pen.forward(fig.width)
-           pen.right(90)
-           pen.forward(fig.height)
-           pen.right(90)
+        for fig in figures:
+            pen.up()
+            pen.goto(fig.x, fig.y)
+            pen.down()
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
 
         window.exitonclick()
