@@ -44,7 +44,7 @@ class Base:
         text = []
         if list_objs is not None:
             for lst in list_objs:
-                text.append(lst.to_dictionaries())
+                text.append(lst.to_dictionary())
         with open(filename, mode="w", encoding="utf-8") as f:
             return f.write(Base.to_json_string(text))
 
@@ -76,7 +76,6 @@ class Base:
             data = cls.from_json_string(file_string)
             for el in data:
                 object_created.append(cls.create(**el))
-
         return object_created
 
     @classmethod
